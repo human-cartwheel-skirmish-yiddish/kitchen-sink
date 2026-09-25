@@ -1,0 +1,4 @@
+What it should do:
+- Give recipes and allow you to view recipes. Maybe each user has their own set of recipes. Consider categories as well.
+
+id | user_id | category | name | ingredients | steps
