@@ -2,3 +2,6 @@ What it should do:
 - Give recipes and allow you to view recipes. Maybe each user has their own set of recipes. Consider categories as well.
 
 id | user_id | category | name | ingredients | steps
+example:
+
+0,0,"dinner","Tomato and Eggs",["Eggs", "Garlic", "Ginger", "Green Onions", "Tomato", "Sugar"], ["Mix egg with onions", "Scramble eggs", "Put aside", "Cook tomatoes on ginger, garlic", "Add water if needed", "Stir", "Add scramble", "Stir", "Season with salt, sugar, msg here"]
