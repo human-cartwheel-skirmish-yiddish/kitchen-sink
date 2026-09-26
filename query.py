@@ -16,3 +16,9 @@ def show_recipes_name():
       cur.execute("SELECT (recipes).name FROM recipe_col")
       for record in cur:
         print(record[0])
+        
+def delete_recipes():
+   with psycopg.connect("dbname=kitchen_sink user=uq8273") as conn:
+    with conn.cursor() as cur:
+      cur.execute("DELETE FROM recipe_col")
+      conn.commit()
