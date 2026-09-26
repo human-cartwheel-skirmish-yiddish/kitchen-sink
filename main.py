@@ -4,7 +4,9 @@ import query
 
 def main():
     filename = "./recipes.txt"
-    query.show_recipes_name()
+    ingredients = query.get_recipes_ingredients()
+    for ingredient in ingredients:
+      print(ingredient)    
 
 if __name__ == "__main__":
     main()

@@ -13,9 +13,19 @@ def insert_from_data(filename):
 def show_recipes_name():
   with psycopg.connect("dbname=kitchen_sink user=uq8273") as conn:
     with conn.cursor() as cur:
-      cur.execute("SELECT (recipes).name FROM recipe_col")
+      cur.execute("SELECT (recipes).name  FROM recipe_col")
       for record in cur:
         print(record[0])
+      
+def get_recipes_ingredients():
+  ingredients = []
+  with psycopg.connect("dbname=kitchen_sink user=uq8273") as conn:
+    with conn.cursor() as cur:
+      cur.execute("SELECT id, (recipes).ingredients FROM recipe_col")
+      for ing in cur:
+        ingredients.append((ing[0], ing[1]))
+  
+  return ingredients
         
 def delete_recipes():
    with psycopg.connect("dbname=kitchen_sink user=uq8273") as conn:
